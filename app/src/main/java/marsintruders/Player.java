@@ -33,7 +33,7 @@ public class Player extends MoveableGameObject{
      * 'jumpToStartPosition()'.
      *
      * @param x The start X position
-     * @param y
+     * @param y The start Y position
      */
     @Override
     public void setStartPosition(int x, int y) {

@@ -1,7 +1,7 @@
 package marsintruders;
+
 import android.gameengine.icadroids.objects.GameObject;
 import android.gameengine.icadroids.objects.MoveableGameObject;
-
 import java.util.ArrayList;
 
 /**
@@ -34,7 +34,7 @@ public class Vijand extends MoveableGameObject{
      * 'jumpToStartPosition()'.
      *
      * @param x The start X position
-     * @param y
+     * @param y The start Y position
      */
     @Override
     public void setStartPosition(int x, int y) {

@@ -9,7 +9,6 @@ import android.gameengine.icadroids.input.TouchInput;
  */
 public class GameManager extends GameEngine {
     protected Player player;
-    protected Vijand vijand;
     protected EnemyContainer enemycontainer;
 
 
