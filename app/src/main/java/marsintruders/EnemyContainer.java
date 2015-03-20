@@ -11,6 +11,8 @@ import java.util.ArrayList;
 
 public class EnemyContainer extends MoveableGameObject{
     public ArrayList<Vijand> vijanden = new ArrayList<>();
+    private final int ROWS = 2;
+    private final int ENEMYS = 9;
 
     public EnemyContainer (GameManager gameManager){
         int teller = 0;

@@ -18,7 +18,7 @@ public class GameManager extends GameEngine {
         // Set up control mechanisms to use
         TouchInput.use = true;
         OnScreenButtons.use = true;
-        setScreenLandscape(false);
+
         player = new Player(this);
         this.addGameObject(this.player, getScreenWidth()/2, 250);
 
