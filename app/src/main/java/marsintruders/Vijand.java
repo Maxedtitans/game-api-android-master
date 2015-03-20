@@ -23,6 +23,7 @@ public class Vijand extends MoveableGameObject{
     @Override
     public void intialize() {
         super.intialize();
+        System.out.println("Doei");
 
     }
 
