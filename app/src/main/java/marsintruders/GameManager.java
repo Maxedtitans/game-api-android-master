@@ -20,11 +20,11 @@ public class GameManager extends GameEngine {
         OnScreenButtons.use = true;
 
         player = new Player(this);
-        player.setSprite("alien");
+        player.setSprite("ship");
         this.addGameObject(this.player, getScreenWidth()/2, 200);
 
         vijand = new Vijand(this);
-        vijand.setSprite("strawberry");
+        vijand.setSprite("alien");
         this.addGameObject(vijand, 200, 50);
     }
     public void update() {

@@ -66,7 +66,6 @@ public class Player extends MoveableGameObject{
         }
         if (OnScreenButtons.buttonA){
             Bullet bullet = new Bullet(gameManager.player.getX(),gameManager.player.getY());
-            bullet.setSprite("tile1");
             gameManager.addGameObject(bullet, gameManager.player.getX(), gameManager.player.getY());
             bullet.setDirectionSpeed(0, 8);
         }

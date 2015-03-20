@@ -14,6 +14,7 @@ public class Bullet extends MoveableGameObject{
     public Bullet (int x, int y){
         this.x = x;
         this.y = y;
+        setSprite("shot");
     }
 
 }
