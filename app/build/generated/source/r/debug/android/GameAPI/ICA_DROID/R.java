@@ -34,16 +34,15 @@ public final class R {
         public static final int shoulder2=0x7f020014;
         public static final int start=0x7f020015;
         public static final int strawberry=0x7f020016;
-        public static final int tile1=0x7f020017;
-        public static final int tile2=0x7f020018;
-        public static final int tile3=0x7f020019;
-        public static final int tile4=0x7f02001a;
-        public static final int tile5=0x7f02001b;
-        public static final int tile6=0x7f02001c;
-        public static final int tonk=0x7f02001d;
-        public static final int uphill=0x7f02001e;
-        public static final int vissentile1=0x7f02001f;
-        public static final int vissentile2=0x7f020020;
+        public static final int tile2=0x7f020017;
+        public static final int tile3=0x7f020018;
+        public static final int tile4=0x7f020019;
+        public static final int tile5=0x7f02001a;
+        public static final int tile6=0x7f02001b;
+        public static final int tonk=0x7f02001c;
+        public static final int uphill=0x7f02001d;
+        public static final int vissentile1=0x7f02001e;
+        public static final int vissentile2=0x7f02001f;
     }
     public static final class id {
         public static final int FPSButton=0x7f060008;

@@ -50,13 +50,6 @@ public class Player extends MoveableGameObject{
     @Override
     public void update() {
         super.update();
-        if (OnScreenButtons.dPadUp){
-          gameManager.player.setY(gameManager.player.getY() - 10);
-        }
-        if (OnScreenButtons.dPadDown)
-        {
-            gameManager.player.setY(gameManager.player.getY() + 10);
-        }
         if (OnScreenButtons.dPadRight)
         {
             gameManager.player.setX(gameManager.player.getX() + 10);
