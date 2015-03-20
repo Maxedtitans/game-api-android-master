@@ -77,7 +77,7 @@ public class Vijand extends MoveableGameObject{
         if (gebotst != null){
             for(GameObject g : gebotst){
                 if (g instanceof Bullet){
-                    System.out.println("GEBOTST");
+                    System.out.println("MART");
                 }
 
             }
