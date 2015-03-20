@@ -52,29 +52,12 @@ public class Vijand extends MoveableGameObject{
     @Override
     public void update() {
         super.update();
-        if (OnScreenButtons.dPadUp){
-            gameManager.player.setY(gameManager.player.getY() - 20);
-        }
-        if (OnScreenButtons.dPadDown)
-        {
-            gameManager.player.setY(gameManager.player.getY() + 20);
-        }
-        if (OnScreenButtons.dPadRight)
-        {
-            gameManager.player.setX(gameManager.player.getX() + 20);
-        }
-        if (OnScreenButtons.dPadLeft)
-        {
-            gameManager.player.setX(gameManager.player.getX() - 20);
-        }
-
         ArrayList<GameObject> gebotst = getCollidedObjects();
         if (gebotst != null){
             for(GameObject g : gebotst){
                 if (g instanceof Bullet){
                     System.out.println("GEBOTST");
                 }
-
             }
         }
     }
