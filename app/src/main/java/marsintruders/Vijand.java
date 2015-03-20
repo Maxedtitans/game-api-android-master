@@ -67,12 +67,6 @@ public class Vijand extends MoveableGameObject{
         {
             gameManager.player.setX(gameManager.player.getX() - 20);
         }
-        if (OnScreenButtons.buttonA){
-            marsintruders.Bullet bullet = new marsintruders.Bullet(gameManager.player.getX(),gameManager.player.getY());
-            bullet.setSprite("tile1");
-            gameManager.addGameObject(bullet, gameManager.player.getX(), gameManager.player.getY());
-            bullet.setDirectionSpeed(0, 8);
-        }
 
         ArrayList<GameObject> gebotst = getCollidedObjects();
         if (gebotst != null){
