@@ -9,11 +9,13 @@ import android.gameengine.icadroids.objects.MoveableGameObject;
  */
 public class Player extends MoveableGameObject{
     marsintruders.GameManager gameManager;
+    public static int score;
 
 
     public Player(GameManager gamemanager){
         this.gameManager = gamemanager;
         setSprite("ship");
+        score = 0;
     }
     /**
      * Called when the application starts. You can override this method to do initialization
@@ -65,5 +67,7 @@ public class Player extends MoveableGameObject{
             bullet.setDirectionSpeed(0, 8);
         }
     }
+
+
 
 }

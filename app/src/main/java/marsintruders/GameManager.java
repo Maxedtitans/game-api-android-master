@@ -18,7 +18,7 @@ public class GameManager extends GameEngine {
         OnScreenButtons.use = true;
 
         player = new Player(this);
-        this.addGameObject(this.player, getScreenWidth()/2, 200);
+        this.addGameObject(this.player, getScreenWidth()/2, 250);
 
         enemycontainer = new EnemyContainer(this);
     }

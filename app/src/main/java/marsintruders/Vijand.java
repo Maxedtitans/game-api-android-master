@@ -9,9 +9,11 @@ import java.util.ArrayList;
  */
 public class Vijand extends MoveableGameObject{
 
+    GameManager gameManager;
 
-    public Vijand(){
+    public Vijand(GameManager gameManager){
         setSprite("alien");
+        this.gameManager = gameManager;
 
     }
     /**
@@ -55,7 +57,9 @@ public class Vijand extends MoveableGameObject{
         if (gebotst != null){
             for(GameObject g : gebotst){
                 if (g instanceof Bullet){
-                    System.out.println("Hoi");
+                    gameManager.deleteGameObject(g);
+                    gameManager.deleteGameObject(this);
+                    Player.score++;
                 }
             }
         }
