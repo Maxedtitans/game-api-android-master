@@ -4,12 +4,7 @@ import android.gameengine.icadroids.engine.GameEngine;
 import android.gameengine.icadroids.input.OnScreenButtons;
 import android.gameengine.icadroids.input.TouchInput;
 
-import java.util.ArrayList;
 
-
-/**
- * Created by Sjuulius on 18-3-2015.
- */
 public class GameManager extends GameEngine {
     protected Player player;
     protected Vijand vijand;
@@ -26,6 +21,7 @@ public class GameManager extends GameEngine {
         vijand = new Vijand(this);
         this.addGameObject(vijand, 200, 50);
     }
+
     public void update() {
         super.update();
     }
