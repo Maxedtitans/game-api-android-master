@@ -12,7 +12,7 @@
         android:label="@string/app_name" android:debuggable="true">
         <activity
             android:label="@string/app_name"
-            android:name="test2.GameManager"
+            android:name="marsIntrudersGame.GameManager"
             android:screenOrientation="portrait" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />

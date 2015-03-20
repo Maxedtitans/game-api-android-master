@@ -13,7 +13,7 @@ package game;
 import android.content.Intent;
 import android.gameengine.icadroids.engine.GameEngine;
 
-import test2.GameManager;
+import marsIntrudersGame.GameManager;
 
 
 public class MyAndroidGame extends GameEngine {
