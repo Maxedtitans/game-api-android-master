@@ -1,16 +1,17 @@
 package marsintruders;
 
+import android.gameengine.icadroids.alarms.Alarm;
 import android.gameengine.icadroids.input.OnScreenButtons;
 import android.gameengine.icadroids.objects.MoveableGameObject;
 
 
 /**
  * Created by Sjuulius on 18-3-2015.
+ * @author Mart Geluk
  */
 public class Player extends MoveableGameObject{
     marsintruders.GameManager gameManager;
     public static int score;
-
 
     public Player(GameManager gamemanager){
         this.gameManager = gamemanager;
@@ -67,7 +68,5 @@ public class Player extends MoveableGameObject{
             bullet.setDirectionSpeed(0, 8);
         }
     }
-
-
 
 }
