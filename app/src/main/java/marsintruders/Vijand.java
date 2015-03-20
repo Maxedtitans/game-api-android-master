@@ -7,14 +7,16 @@ import java.util.ArrayList;
 /**
  * Created by Sjuulius & Mart Geluk
  */
+
 public class Vijand extends MoveableGameObject{
 
     GameManager gameManager;
+    EnemyContainer enemycontainer;
 
-    public Vijand(GameManager gameManager){
+    public Vijand(GameManager gameManager, EnemyContainer enemycontainer){
         setSprite("alien");
         this.gameManager = gameManager;
-
+        this.enemycontainer = enemycontainer;
     }
     /**
      * Called when the application starts. You can override this method to do initialization
@@ -25,7 +27,6 @@ public class Vijand extends MoveableGameObject{
     @Override
     public void intialize() {
         super.intialize();
-
     }
 
     /**
@@ -50,6 +51,7 @@ public class Vijand extends MoveableGameObject{
      *
      * @see android.gameengine.icadroids.objects.GameObject#update()
      */
+
     @Override
     public void update() {
         super.update();
@@ -59,6 +61,7 @@ public class Vijand extends MoveableGameObject{
                 if (g instanceof Bullet){
                     gameManager.deleteGameObject(g);
                     gameManager.deleteGameObject(this);
+                    enemycontainer.vijanden.remove(this);
                     Player.score++;
                 }
             }

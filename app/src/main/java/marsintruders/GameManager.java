@@ -25,5 +25,6 @@ public class GameManager extends GameEngine {
 
     public void update() {
         super.update();
+        enemycontainer.update();
     }
 }
