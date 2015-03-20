@@ -61,7 +61,7 @@ public class Player extends MoveableGameObject{
         }
         if (OnScreenButtons.buttonA){
             Bullet bullet = new Bullet(gameManager.player.getX(),gameManager.player.getY());
-            gameManager.addGameObject(bullet, gameManager.player.getX() + 5, gameManager.player.getY());
+            gameManager.addGameObject(bullet, gameManager.player.getX() + 10, gameManager.player.getY());
             bullet.setDirectionSpeed(0, 8);
         }
     }

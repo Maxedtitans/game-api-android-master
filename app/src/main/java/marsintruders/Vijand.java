@@ -8,11 +8,11 @@ import java.util.ArrayList;
  * Created by Sjuulius & Mart Geluk
  */
 public class Vijand extends MoveableGameObject{
-    marsintruders.GameManager gameManager;
 
-    public Vijand(marsintruders.GameManager gamemanager){
+
+    public Vijand(){
         setSprite("alien");
-        this.gameManager = gamemanager;
+
     }
     /**
      * Called when the application starts. You can override this method to do initialization
@@ -55,7 +55,7 @@ public class Vijand extends MoveableGameObject{
         if (gebotst != null){
             for(GameObject g : gebotst){
                 if (g instanceof Bullet){
-                    System.out.println("Gebotst");
+                    System.out.println("Hoi");
                 }
             }
         }
