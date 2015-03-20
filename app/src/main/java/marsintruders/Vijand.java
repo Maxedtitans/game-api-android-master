@@ -1,6 +1,4 @@
 package marsintruders;
-
-import android.gameengine.icadroids.input.OnScreenButtons;
 import android.gameengine.icadroids.objects.GameObject;
 import android.gameengine.icadroids.objects.MoveableGameObject;
 
@@ -10,11 +8,13 @@ import java.util.ArrayList;
  * Created by Sjuulius & Mart Geluk
  */
 public class Vijand extends MoveableGameObject{
-    marsintruders.GameManager gameManager;
 
-    public Vijand(marsintruders.GameManager gamemanager){
+    GameManager gameManager;
+
+    public Vijand(GameManager gameManager){
         setSprite("alien");
-        this.gameManager = gamemanager;
+        this.gameManager = gameManager;
+
     }
     /**
      * Called when the application starts. You can override this method to do initialization
@@ -25,6 +25,7 @@ public class Vijand extends MoveableGameObject{
     @Override
     public void intialize() {
         super.intialize();
+
     }
 
     /**
@@ -56,7 +57,9 @@ public class Vijand extends MoveableGameObject{
         if (gebotst != null){
             for(GameObject g : gebotst){
                 if (g instanceof Bullet){
-                    System.out.println("GEBOTST");
+                    gameManager.deleteGameObject(g);
+                    gameManager.deleteGameObject(this);
+                    Player.score++;
                 }
             }
         }

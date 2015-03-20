@@ -2,7 +2,10 @@
 package marsintruders;
 
 
+import android.gameengine.icadroids.objects.GameObject;
 import android.gameengine.icadroids.objects.MoveableGameObject;
+
+import java.util.ArrayList;
 
 /**
  * Created by Sjuulius on 18-3-2015.

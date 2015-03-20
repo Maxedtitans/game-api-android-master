@@ -9,10 +9,13 @@ import android.gameengine.icadroids.objects.MoveableGameObject;
  */
 public class Player extends MoveableGameObject{
     marsintruders.GameManager gameManager;
+    public static int score;
 
 
     public Player(GameManager gamemanager){
         this.gameManager = gamemanager;
+        setSprite("ship");
+        score = 0;
     }
     /**
      * Called when the application starts. You can override this method to do initialization
@@ -60,9 +63,11 @@ public class Player extends MoveableGameObject{
         }
         if (OnScreenButtons.buttonA){
             Bullet bullet = new Bullet(gameManager.player.getX(),gameManager.player.getY());
-            gameManager.addGameObject(bullet, gameManager.player.getX() + 5, gameManager.player.getY());
+            gameManager.addGameObject(bullet, gameManager.player.getX() + 10, gameManager.player.getY());
             bullet.setDirectionSpeed(0, 8);
         }
     }
+
+
 
 }
