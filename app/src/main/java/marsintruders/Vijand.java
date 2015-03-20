@@ -13,6 +13,7 @@ public class Vijand extends MoveableGameObject{
     marsintruders.GameManager gameManager;
 
     public Vijand(marsintruders.GameManager gamemanager){
+        setSprite("alien");
         this.gameManager = gamemanager;
     }
     /**
@@ -77,7 +78,7 @@ public class Vijand extends MoveableGameObject{
         if (gebotst != null){
             for(GameObject g : gebotst){
                 if (g instanceof Bullet){
-                    System.out.println("Kmarti");
+                    System.out.println("GEBOTST");
                 }
 
             }

@@ -10,6 +10,7 @@ import android.gameengine.icadroids.objects.MoveableGameObject;
 public class Player extends MoveableGameObject{
     marsintruders.GameManager gameManager;
 
+
     public Player(GameManager gamemanager){
         this.gameManager = gamemanager;
     }
@@ -66,8 +67,9 @@ public class Player extends MoveableGameObject{
         }
         if (OnScreenButtons.buttonA){
             Bullet bullet = new Bullet(gameManager.player.getX(),gameManager.player.getY());
-            gameManager.addGameObject(bullet, gameManager.player.getX(), gameManager.player.getY());
+            gameManager.addGameObject(bullet, gameManager.player.getX() + 5, gameManager.player.getY());
             bullet.setDirectionSpeed(0, 8);
         }
     }
+
 }
