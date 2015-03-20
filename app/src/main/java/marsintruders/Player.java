@@ -1,6 +1,5 @@
 package marsintruders;
 
-import android.gameengine.icadroids.alarms.Alarm;
 import android.gameengine.icadroids.input.OnScreenButtons;
 import android.gameengine.icadroids.objects.MoveableGameObject;
 

@@ -34,5 +34,4 @@ public class EnemyContainer extends MoveableGameObject{
             vijand.setX(vijand.getX() + 5);
         }
     }
-
 }
