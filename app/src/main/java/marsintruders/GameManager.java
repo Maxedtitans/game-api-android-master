@@ -1,5 +1,7 @@
 package marsintruders;
 
+//Boolean landscape set to false in: "android.gameengine.icadroids > Engine > GameEngine".
+
 import android.gameengine.icadroids.engine.GameEngine;
 import android.gameengine.icadroids.input.OnScreenButtons;
 import android.gameengine.icadroids.input.TouchInput;
@@ -19,7 +21,7 @@ public class GameManager extends GameEngine {
         OnScreenButtons.use = true;
 
         player = new Player(this);
-        this.addGameObject(this.player, getScreenWidth()/2, 250);
+        this.addGameObject(this.player, getScreenWidth()/2, 300);
 
         enemycontainer = new EnemyContainer(this);
     }
