@@ -119,7 +119,7 @@ public abstract class GameEngine extends Activity implements SensorEventListener
 	/**
 	 * Sets the mobile device to landscape view if set to true
 	 */
-	private boolean landscape = true;
+	private boolean landscape = false;
 
 	/**
 	 * boolean indicating if the game world has a tilemap.

@@ -14,10 +14,10 @@ public class EnemyContainer extends MoveableGameObject{
 
     public EnemyContainer (GameManager gameManager){
         int teller = 0;
-        for (int i = 1; i  < 3; i++) {
-            for (int j = 0; j < 9; j++) {
+        for (int i = 1; i  < 5; i++) {
+            for (int j = 0; j < 6; j++) {
                 vijanden.add(new Vijand(gameManager, this));
-                gameManager.addGameObject(vijanden.get(teller), (15 + 50 * j), 30 * i);
+                gameManager.addGameObject(vijanden.get(teller), (10 + 50 * j), 30 * i);
                 teller++;
             }
         }
