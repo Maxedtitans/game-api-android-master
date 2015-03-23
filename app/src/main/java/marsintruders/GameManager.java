@@ -6,9 +6,7 @@ import android.gameengine.icadroids.engine.GameEngine;
 import android.gameengine.icadroids.input.OnScreenButtons;
 import android.gameengine.icadroids.input.TouchInput;
 
-/**
- * changed GameEnige value landscape to false for portrait instead of landscape
- */
+
 public class GameManager extends GameEngine {
     protected Player player;
     protected EnemyContainer enemycontainer;

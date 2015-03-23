@@ -1,5 +1,7 @@
 package marsintruders;
 
+import android.gameengine.icadroids.alarms.Alarm;
+import android.gameengine.icadroids.alarms.IAlarm;
 import android.gameengine.icadroids.objects.GameObject;
 import android.gameengine.icadroids.objects.MoveableGameObject;
 import java.util.ArrayList;
@@ -8,15 +10,22 @@ import java.util.ArrayList;
  * Created by Sjuulius & Mart Geluk
  */
 
-public class Vijand extends MoveableGameObject{
+public class Vijand extends MoveableGameObject implements IAlarm{
 
     GameManager gameManager;
     EnemyContainer enemycontainer;
+    private boolean kanSchieten;
+    private Alarm myAlarm;
 
-    public Vijand(GameManager gameManager, EnemyContainer enemycontainer){
+    public Vijand(GameManager gameManager, EnemyContainer enemycontainer, boolean kanSchieten){
         setSprite("alien");
         this.gameManager = gameManager;
         this.enemycontainer = enemycontainer;
+        this.kanSchieten = kanSchieten;
+        if (kanSchieten) {
+            myAlarm = new Alarm(3, 60, this);
+            myAlarm.startAlarm();
+        }
     }
     /**
      * Called when the application starts. You can override this method to do initialization
@@ -52,6 +61,13 @@ public class Vijand extends MoveableGameObject{
      * @see android.gameengine.icadroids.objects.GameObject#update()
      */
 
+    public void shoot() {
+            Bullet bullet = new Bullet(this.getX(), this.getY());
+            gameManager.addGameObject(bullet, this.getX() + getFrameWidth() / 2, this.getY() + getFrameHeight() + 4);
+            bullet.setDirectionSpeed(180, 5);
+       myAlarm.restartAlarm();
+    }
+
     @Override
     public void update() {
         super.update();
@@ -66,5 +82,10 @@ public class Vijand extends MoveableGameObject{
                 }
             }
         }
+    }
+
+    @Override
+    public void triggerAlarm(int alarmID) {
+        shoot();
     }
 }
