@@ -83,6 +83,12 @@ public class EnemyContainer extends MoveableGameObject{
         return meestRechts;
     }
 
+    public void resetEnemies(){
+        for (Vijand vijand: vijanden){
+            vijand.setY(vijand.getY() - 140);
+        }
+    }
+
     @Override
     public void update(){
         if (vijanden.size() > 0) {

@@ -78,11 +78,11 @@ public class Vijand extends MoveableGameObject implements IAlarm{
                     gameManager.deleteGameObject(g);
                     gameManager.deleteGameObject(this);
                     enemycontainer.vijanden.remove(this);
-                    Player.score++;
                 }
             }
         }
     }
+
 
     @Override
     public void triggerAlarm(int alarmID) {

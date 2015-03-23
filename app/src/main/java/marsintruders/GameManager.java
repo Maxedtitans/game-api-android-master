@@ -5,12 +5,16 @@ package marsintruders;
 import android.gameengine.icadroids.engine.GameEngine;
 import android.gameengine.icadroids.input.OnScreenButtons;
 import android.gameengine.icadroids.input.TouchInput;
+import android.gameengine.icadroids.objects.GameObject;
+
+import java.util.ArrayList;
 
 
 public class GameManager extends GameEngine {
     protected Player player;
     protected EnemyContainer enemycontainer;
 
+    ArrayList<GameObject> lives = new ArrayList<>();
 
     @Override
     protected void initialize() {
@@ -18,10 +22,12 @@ public class GameManager extends GameEngine {
         TouchInput.use = true;
         OnScreenButtons.use = true;
 
-        player = new Player(this);
+        enemycontainer = new EnemyContainer(this);
+
+        player = new Player(this, enemycontainer);
         this.addGameObject(this.player, getScreenWidth()/2, 300);
 
-        enemycontainer = new EnemyContainer(this);
+
     }
 
     public void update() {

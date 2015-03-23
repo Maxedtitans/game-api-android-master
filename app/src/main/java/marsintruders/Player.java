@@ -9,6 +9,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 
+
 import java.util.ArrayList;
 
 
@@ -18,15 +19,15 @@ import java.util.ArrayList;
  */
 public class Player extends MoveableGameObject implements IAlarm {
     marsintruders.GameManager gameManager;
-    public static int score;
+    EnemyContainer enemycontainer;
     private Alarm myAlarm;
     private boolean ingedrukt = false;
     private int lives;
 
-    public Player(GameManager gamemanager){
+    public Player(GameManager gamemanager, EnemyContainer enemycontainer){
         this.gameManager = gamemanager;
+        this.enemycontainer = enemycontainer;
         setSprite("ship");
-        score = 0;
         lives = 3;
 
         myAlarm = new Alarm(2, 15, this);
@@ -83,7 +84,7 @@ public class Player extends MoveableGameObject implements IAlarm {
         if (OnScreenButtons.buttonA){
            if (ingedrukt == true){
                Bullet bullet = new Bullet(gameManager.player.getX(), gameManager.player.getY());
-               gameManager.addGameObject(bullet, gameManager.player.getX() + 10, gameManager.player.getY());
+               gameManager.addGameObject(bullet, gameManager.player.getX() + 10, gameManager.player.getY() - 23);
                bullet.setDirectionSpeed(0, 8);
                myAlarm.restartAlarm();
                ingedrukt = false;
@@ -93,10 +94,13 @@ public class Player extends MoveableGameObject implements IAlarm {
         ArrayList<GameObject> gebotst = getCollidedObjects();
         if (gebotst != null){
             for(GameObject g : gebotst){
-                if (g instanceof Vijand || g instanceof Bullet){
-                    lives--;
-                    System.out.println("Je bent gedood, levens over: " + lives);
+                if (g instanceof Bullet || g instanceof Vijand){
+                    if (g instanceof Vijand) {
+                        enemycontainer.resetEnemies();
+                    }
                 }
+                lives--;
+                gameManager.deleteGameObject(g);
             }
         }
         if (lives <= 0){
@@ -104,10 +108,18 @@ public class Player extends MoveableGameObject implements IAlarm {
         }
     }
 
-
     @Override
     public void triggerAlarm(int alarmID) {
         ingedrukt = true;
+    }
+
+    @Override
+    public void drawGameObject(Canvas canvas) {
+        super.drawGameObject(canvas);
+        Paint blackLetters=new Paint();
+        blackLetters.setColor(Color.BLACK);
+        blackLetters.setTextSize(20);
+        canvas.drawText("Levens: "+ lives, 7, 15, blackLetters );
     }
 
 }
