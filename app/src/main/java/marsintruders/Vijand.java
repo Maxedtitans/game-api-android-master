@@ -6,12 +6,7 @@ import android.gameengine.icadroids.objects.GameObject;
 import android.gameengine.icadroids.objects.MoveableGameObject;
 import java.util.ArrayList;
 
-/**
- * Created by Sjuulius & Mart Geluk
- */
-
 public class Vijand extends MoveableGameObject implements IAlarm{
-
     GameManager gameManager;
     EnemyContainer enemycontainer;
     private boolean kanSchieten;
@@ -62,9 +57,9 @@ public class Vijand extends MoveableGameObject implements IAlarm{
      */
 
     public void shoot() {
-            Bullet bullet = new Bullet(this.getX(), this.getY());
-            gameManager.addGameObject(bullet, this.getX() + getFrameWidth() / 2, this.getY() + getFrameHeight() + 4);
-            bullet.setDirectionSpeed(180, 5);
+       Bullet bullet = new Bullet();
+       gameManager.addGameObject(bullet, this.getX() + getFrameWidth() / 2, this.getY() + getFrameHeight() + 4);
+       bullet.setDirectionSpeed(180, 5);
        myAlarm.restartAlarm();
     }
 
@@ -82,7 +77,6 @@ public class Vijand extends MoveableGameObject implements IAlarm{
             }
         }
     }
-
 
     @Override
     public void triggerAlarm(int alarmID) {

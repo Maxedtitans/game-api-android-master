@@ -5,24 +5,38 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="8" />
-    
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <android:uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
+        android:debuggable="true"
         android:icon="@drawable/ship"
-        android:label="@string/app_name" android:debuggable="true">
+        android:label="@string/app_name" >
         <activity
-            android:label="@string/app_name"
             android:name="marsintruders.GameManager"
+            android:label="@string/app_name"
             android:screenOrientation="portrait" >
-            <intent-filter >
+
+        </activity>
+
+        <activity
+            android:name="marsintruders.Main2Activity"
+            android:label="@string/title_activity_main2" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-	
-	<uses-permission android:name="android.permission.WAKE_LOCK" />
-	<uses-permission android:name="android.permission.VIBRATE" />
-	
+
 </manifest>

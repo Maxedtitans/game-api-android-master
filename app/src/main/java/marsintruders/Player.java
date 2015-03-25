@@ -8,29 +8,23 @@ import android.gameengine.icadroids.objects.MoveableGameObject;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-
-
 import java.util.ArrayList;
 
-
-/**
- * Created by Sjuulius on 18-3-2015.
- * @author Mart Geluk
- */
 public class Player extends MoveableGameObject implements IAlarm {
     marsintruders.GameManager gameManager;
     EnemyContainer enemycontainer;
     private Alarm myAlarm;
-    private boolean ingedrukt = false;
+    private boolean pressedButton = false;
     private int lives;
+    private int shootingTime;
 
     public Player(GameManager gamemanager, EnemyContainer enemycontainer){
         this.gameManager = gamemanager;
         this.enemycontainer = enemycontainer;
         setSprite("ship");
         lives = 3;
-
-        myAlarm = new Alarm(2, 15, this);
+        shootingTime = 15;
+        myAlarm = new Alarm(2, shootingTime, this);
         myAlarm.startAlarm();
     }
     /**
@@ -82,12 +76,12 @@ public class Player extends MoveableGameObject implements IAlarm {
             }
         }
         if (OnScreenButtons.buttonA){
-           if (ingedrukt == true){
-               Bullet bullet = new Bullet(gameManager.player.getX(), gameManager.player.getY());
+           if (pressedButton == true){
+               Bullet bullet = new Bullet();
                gameManager.addGameObject(bullet, gameManager.player.getX() + 10, gameManager.player.getY() - 23);
                bullet.setDirectionSpeed(0, 8);
                myAlarm.restartAlarm();
-               ingedrukt = false;
+               pressedButton = false;
            }
         }
 
@@ -104,13 +98,31 @@ public class Player extends MoveableGameObject implements IAlarm {
             }
         }
         if (lives <= 0){
-           System.out.println("GAME OVER!");
+           //System.out.println("GAME OVER!");
         }
+    }
+
+    public void setLives(int lives){
+        this.lives = lives;
+    }
+
+    public int getLives(){
+        return lives;
+    }
+    public void setShootingTime(int shootingTime){
+        if(this.shootingTime >= 5) {
+            myAlarm.setTime(shootingTime);
+            this.shootingTime = shootingTime;
+        }
+    }
+
+    public int getShootingTime(){
+        return shootingTime;
     }
 
     @Override
     public void triggerAlarm(int alarmID) {
-        ingedrukt = true;
+        pressedButton = true;
     }
 
     @Override
@@ -121,5 +133,4 @@ public class Player extends MoveableGameObject implements IAlarm {
         blackLetters.setTextSize(20);
         canvas.drawText("Levens: "+ lives, 7, 15, blackLetters );
     }
-
 }

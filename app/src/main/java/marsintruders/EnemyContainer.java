@@ -1,22 +1,15 @@
 package marsintruders;
 
-import android.gameengine.icadroids.alarms.Alarm;
-import android.gameengine.icadroids.alarms.IAlarm;
-import android.gameengine.icadroids.objects.GameObject;
 import android.gameengine.icadroids.objects.MoveableGameObject;
-
 import java.util.ArrayList;
 
-/**
- * Created by Sjuulius on 20-3-2015.
- */
 
 public class EnemyContainer extends MoveableGameObject{
     public ArrayList<Vijand> vijanden = new ArrayList<>();
     private final int ROWS = 4;
     private final int ENEMYROW = 5;
     GameManager gameManager;
-    boolean rechts = false;
+    boolean isRechterkantScherm = false;
 
     public EnemyContainer (GameManager gameManager){
         int teller = 0;
@@ -42,7 +35,6 @@ public class EnemyContainer extends MoveableGameObject{
                 }
             }
         }
-
     }
 
     public void naarLinks(){
@@ -85,29 +77,27 @@ public class EnemyContainer extends MoveableGameObject{
 
     public void resetEnemies(){
         for (Vijand vijand: vijanden){
-            vijand.setY(vijand.getY() - 140);
+            vijand.setY(vijand.getY() - gameManager.getScreenHeight()/3);
         }
     }
 
     @Override
     public void update(){
         if (vijanden.size() > 0) {
-            if (getRechterX() + vijanden.get(0).getFrameWidth() <= gameManager.getScreenWidth() - 10 && rechts == false) {
+            if (getRechterX() + vijanden.get(0).getFrameWidth() <= gameManager.getScreenWidth() - 10 && isRechterkantScherm == false) {
                 naarRechts();
                 if (getRechterX() + vijanden.get(0).getFrameWidth() == 311) {
                     naarBeneden();
-                    rechts = true;
+                    isRechterkantScherm = true;
                 }
             }
-            if (rechts == true) {
+            if (isRechterkantScherm == true) {
                 naarLinks();
                 if (getLinkerX() == 7) {
                     naarBeneden();
-                    rechts = false;
+                    isRechterkantScherm = false;
                 }
             }
         }
-
     }
-
 }

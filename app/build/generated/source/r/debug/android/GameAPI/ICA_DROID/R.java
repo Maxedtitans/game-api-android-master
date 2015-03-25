@@ -10,6 +10,10 @@ package android.GameAPI.ICA_DROID;
 public final class R {
     public static final class attr {
     }
+    public static final class dimen {
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+    }
     public static final class drawable {
         public static final int alien=0x7f020000;
         public static final int bg=0x7f020001;
@@ -24,76 +28,88 @@ public final class R {
         public static final int dpad_left=0x7f02000a;
         public static final int dpad_right=0x7f02000b;
         public static final int dpad_up=0x7f02000c;
-        public static final int fishframes=0x7f02000d;
-        public static final int heart=0x7f02000e;
-        public static final int ic_launcher1=0x7f02000f;
-        public static final int nyan=0x7f020010;
-        public static final int select=0x7f020011;
-        public static final int ship=0x7f020012;
-        public static final int shot=0x7f020013;
-        public static final int shoulder1=0x7f020014;
-        public static final int shoulder2=0x7f020015;
-        public static final int start=0x7f020016;
-        public static final int strawberry=0x7f020017;
-        public static final int tile2=0x7f020018;
-        public static final int tile3=0x7f020019;
-        public static final int tile4=0x7f02001a;
-        public static final int tile5=0x7f02001b;
-        public static final int tile6=0x7f02001c;
-        public static final int tonk=0x7f02001d;
-        public static final int uphill=0x7f02001e;
-        public static final int viewer=0x7f02001f;
-        public static final int vissentile1=0x7f020020;
-        public static final int vissentile2=0x7f020021;
+        public static final int finalboss=0x7f02000d;
+        public static final int fishframes=0x7f02000e;
+        public static final int heart=0x7f02000f;
+        public static final int ic_launcher1=0x7f020010;
+        public static final int nyan=0x7f020011;
+        public static final int select=0x7f020012;
+        public static final int ship=0x7f020013;
+        public static final int shot=0x7f020014;
+        public static final int shoulder1=0x7f020015;
+        public static final int shoulder2=0x7f020016;
+        public static final int smallgun=0x7f020017;
+        public static final int spaceship=0x7f020018;
+        public static final int start=0x7f020019;
+        public static final int strawberry=0x7f02001a;
+        public static final int tile2=0x7f02001b;
+        public static final int tile3=0x7f02001c;
+        public static final int tile4=0x7f02001d;
+        public static final int tile5=0x7f02001e;
+        public static final int tile6=0x7f02001f;
+        public static final int tonk=0x7f020020;
+        public static final int uphill=0x7f020021;
+        public static final int vissentile1=0x7f020022;
+        public static final int vissentile2=0x7f020023;
     }
     public static final class id {
-        public static final int FPSButton=0x7f060008;
-        public static final int Pointless=0x7f06001a;
-        public static final int backButton=0x7f06000a;
-        public static final int buttonA=0x7f060012;
-        public static final int buttonB=0x7f060013;
-        public static final int buttonDebugGameObject=0x7f060009;
-        public static final int buttonSelect=0x7f060016;
-        public static final int buttonStart=0x7f060017;
-        public static final int buttonX=0x7f060015;
-        public static final int buttonY=0x7f060014;
-        public static final int digitalClock1=0x7f06001c;
-        public static final int dpadCenter=0x7f06000d;
-        public static final int dpadDown=0x7f06000f;
-        public static final int dpadLeft=0x7f06000e;
-        public static final int dpadRight=0x7f060010;
-        public static final int dpadUp=0x7f060011;
-        public static final int hoi=0x7f06001b;
-        public static final int knop=0x7f06001d;
-        public static final int linearLayout1=0x7f060000;
-        public static final int linearLayout2=0x7f060003;
-        public static final int linearLayout3=0x7f060006;
-        public static final int main_view=0x7f06000c;
-        public static final int objectsButton=0x7f060004;
-        public static final int opendebugmenu=0x7f06000b;
-        public static final int pauseButton=0x7f060007;
-        public static final int soundButton=0x7f060002;
-        public static final int tekstVeldje=0x7f060019;
-        public static final int tekstveldje=0x7f06001e;
-        public static final int textje=0x7f060018;
-        public static final int tilesButton=0x7f060001;
-        public static final int timersButton=0x7f060005;
+        public static final int FPSButton=0x7f08000b;
+        public static final int Mainscherm=0x7f080000;
+        public static final int Pointless=0x7f08001d;
+        public static final int action_settings=0x7f080022;
+        public static final int backButton=0x7f08000d;
+        public static final int button=0x7f080001;
+        public static final int buttonA=0x7f080015;
+        public static final int buttonB=0x7f080016;
+        public static final int buttonDebugGameObject=0x7f08000c;
+        public static final int buttonSelect=0x7f080019;
+        public static final int buttonStart=0x7f08001a;
+        public static final int buttonX=0x7f080018;
+        public static final int buttonY=0x7f080017;
+        public static final int digitalClock1=0x7f08001f;
+        public static final int dpadCenter=0x7f080010;
+        public static final int dpadDown=0x7f080012;
+        public static final int dpadLeft=0x7f080011;
+        public static final int dpadRight=0x7f080013;
+        public static final int dpadUp=0x7f080014;
+        public static final int hoi=0x7f08001e;
+        public static final int knop=0x7f080020;
+        public static final int linearLayout1=0x7f080003;
+        public static final int linearLayout2=0x7f080006;
+        public static final int linearLayout3=0x7f080009;
+        public static final int main_view=0x7f08000f;
+        public static final int objectsButton=0x7f080007;
+        public static final int opendebugmenu=0x7f08000e;
+        public static final int pauseButton=0x7f08000a;
+        public static final int soundButton=0x7f080005;
+        public static final int tekstVeldje=0x7f08001c;
+        public static final int tekstveldje=0x7f080021;
+        public static final int textView=0x7f080002;
+        public static final int textje=0x7f08001b;
+        public static final int tilesButton=0x7f080004;
+        public static final int timersButton=0x7f080008;
     }
     public static final class layout {
-        public static final int debuglayout=0x7f030000;
-        public static final int debugmenuopener=0x7f030001;
-        public static final int main=0x7f030002;
-        public static final int onscreenbuttons=0x7f030003;
-        public static final int testform=0x7f030004;
-        public static final int testformpje=0x7f030005;
+        public static final int activity_main2=0x7f030000;
+        public static final int debuglayout=0x7f030001;
+        public static final int debugmenuopener=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int onscreenbuttons=0x7f030004;
+        public static final int testform=0x7f030005;
+        public static final int testformpje=0x7f030006;
+    }
+    public static final class menu {
+        public static final int menu_main2=0x7f070000;
     }
     public static final class raw {
         public static final int ding=0x7f040000;
         public static final int lucas=0x7f040001;
     }
     public static final class string {
-        public static final int action_settings=0x7f050000;
-        public static final int app_name=0x7f050001;
-        public static final int hello_world=0x7f050002;
+        public static final int action_settings=0x7f060000;
+        public static final int app_name=0x7f060001;
+        public static final int hello_world=0x7f060002;
+        public static final int title_activity_main=0x7f060003;
+        public static final int title_activity_main2=0x7f060004;
     }
 }
