@@ -1,4 +1,4 @@
-package marsintruders;
+package marsintrudersoopd;
 
 import android.gameengine.icadroids.alarms.Alarm;
 import android.gameengine.icadroids.alarms.IAlarm;
@@ -11,7 +11,7 @@ import android.graphics.Paint;
 import java.util.ArrayList;
 
 public class Player extends MoveableGameObject implements IAlarm {
-    marsintruders.GameManager gameManager;
+    GameManager gameManager;
     EnemyContainer enemycontainer;
     private Alarm myAlarm;
     private boolean pressedButton = false;

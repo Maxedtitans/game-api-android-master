@@ -1,4 +1,4 @@
-package marsintruders;
+package marsintrudersoopd;
 
 import android.gameengine.icadroids.alarms.Alarm;
 import android.gameengine.icadroids.alarms.IAlarm;

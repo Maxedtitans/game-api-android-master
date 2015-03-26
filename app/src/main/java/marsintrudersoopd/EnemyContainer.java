@@ -1,4 +1,4 @@
-package marsintruders;
+package marsintrudersoopd;
 
 import android.gameengine.icadroids.objects.MoveableGameObject;
 import java.util.ArrayList;

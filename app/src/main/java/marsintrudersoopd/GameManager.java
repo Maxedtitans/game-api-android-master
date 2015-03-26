@@ -1,4 +1,4 @@
-package marsintruders;
+package marsintrudersoopd;
 
 //Boolean landscape set to false in: "android.gameengine.icadroids > Engine > GameEngine".
 
