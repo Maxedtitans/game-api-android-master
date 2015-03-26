@@ -4,7 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="marsintruders.Main2Activity"
+    tools:context="marsintrudersoopd.Main2Activity"
     android:id="@+id/Mainscherm">
 
     <Button

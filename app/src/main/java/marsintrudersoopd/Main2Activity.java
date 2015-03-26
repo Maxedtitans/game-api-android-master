@@ -1,4 +1,4 @@
-package marsintruders;
+package marsintrudersoopd;
 
 import android.app.Activity;
 import android.content.Intent;
