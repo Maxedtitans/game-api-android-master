@@ -31,6 +31,5 @@ public class PowerUpsController implements IAlarm{
         gameManager.addGameObject(powerUp, willekeurigSchermBreedte, 20);
         powerUp.setDirectionSpeed(180, 5);
         myAlarm.restartAlarm();
-        System.out.println("HOI");
     }
 }
