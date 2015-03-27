@@ -1,6 +1,5 @@
 package marsintrudersoopd;
 
-
 public class LivePowerUp extends PowerUps {
 
     public LivePowerUp(){

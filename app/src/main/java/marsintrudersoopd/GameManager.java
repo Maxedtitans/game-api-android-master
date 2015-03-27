@@ -15,7 +15,6 @@ public class GameManager extends GameEngine {
 
     @Override
     protected void initialize() {
-        // Set up control mechanisms to use
         TouchInput.use = true;
         OnScreenButtons.use = true;
         setBackground("backgroundgrey");

@@ -1,7 +1,5 @@
 package marsintrudersoopd;
 
-import android.GameAPI.ICA_DROID.R;
-import android.content.Intent;
 import android.gameengine.icadroids.alarms.Alarm;
 import android.gameengine.icadroids.alarms.IAlarm;
 import android.gameengine.icadroids.input.OnScreenButtons;

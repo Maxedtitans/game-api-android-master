@@ -9,6 +9,7 @@ public class Bullet extends MoveableGameObject{
         this.gameManager = gameManager;
         setSprite("shot");
     }
+
     /*
     @Override
     public void update(){

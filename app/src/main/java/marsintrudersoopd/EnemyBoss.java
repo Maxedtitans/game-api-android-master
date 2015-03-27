@@ -33,6 +33,11 @@ public class EnemyBoss extends MoveableGameObject implements IAlarm{
     @Override
     public void update() {
         super.update();
+        /*
+        if (health <= 0){
+            StartActivity;
+        }
+        */
         ArrayList<GameObject> gebotst = getCollidedObjects();
         if (gebotst != null) {
             for (GameObject g : gebotst) {

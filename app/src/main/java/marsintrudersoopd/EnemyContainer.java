@@ -3,7 +3,6 @@ package marsintrudersoopd;
 import android.gameengine.icadroids.objects.MoveableGameObject;
 import java.util.ArrayList;
 
-
 public class EnemyContainer extends MoveableGameObject{
     public ArrayList<Vijand> vijanden = new ArrayList<>();
     private final int ROWS = 4;

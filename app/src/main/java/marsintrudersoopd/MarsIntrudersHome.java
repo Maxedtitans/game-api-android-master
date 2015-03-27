@@ -24,6 +24,7 @@ public class MarsIntrudersHome extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MarsIntrudersHome.this, MarsIntrudersInfo.class));
+
             }
         });
     }
