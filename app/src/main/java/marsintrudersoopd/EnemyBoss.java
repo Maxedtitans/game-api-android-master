@@ -2,6 +2,7 @@ package marsintrudersoopd;
 
 import android.gameengine.icadroids.alarms.Alarm;
 import android.gameengine.icadroids.alarms.IAlarm;
+import android.gameengine.icadroids.engine.GameEngine;
 import android.gameengine.icadroids.objects.GameObject;
 import android.gameengine.icadroids.objects.MoveableGameObject;
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ public class EnemyBoss extends MoveableGameObject implements IAlarm{
     public EnemyBoss(GameManager gameManager){
         this.gameManager = gameManager;
         setSprite("finalboss");
-        health = 5;
+        health = 10;
         myAlarm = new Alarm(4, 60, this);
         myAlarm.startAlarm();
         NUMBEROFBULLETS = 4;
@@ -33,11 +34,6 @@ public class EnemyBoss extends MoveableGameObject implements IAlarm{
     @Override
     public void update() {
         super.update();
-        /*
-        if (health <= 0){
-            StartActivity;
-        }
-        */
         ArrayList<GameObject> gebotst = getCollidedObjects();
         if (gebotst != null) {
             for (GameObject g : gebotst) {
@@ -47,8 +43,13 @@ public class EnemyBoss extends MoveableGameObject implements IAlarm{
                         gameManager.deleteGameObject(g);
                     }
                     if (health == 0){
+                        /*We weten dat de volgende for loop niet mag, maar aangezien we in de les met uw hulp het niet voor elkaar kregen
+                        om op een andere manier de gameobjecten te krijgen, konden we het zo doen.
+                        */
+                        for (GameObject k: GameEngine.items){
+                            k.deleteThisGameObject();
+                        }
                         gameManager.deleteGameObject(g);
-                        gameManager.deleteGameObject(this);
                     }
                 }
             }

@@ -10,12 +10,12 @@ public class Bullet extends MoveableGameObject{
         setSprite("shot");
     }
 
-    /*
+
     @Override
     public void update(){
+        super.update();
         if (this.getY() < 0 || this.getY() > gameManager.getScreenHeight()){
-            //deleteThisGameObject();
+            deleteThisGameObject();
         }
     }
-     */
 }

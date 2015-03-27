@@ -2,6 +2,7 @@ package marsintrudersoopd;
 
 import android.gameengine.icadroids.alarms.Alarm;
 import android.gameengine.icadroids.alarms.IAlarm;
+import android.gameengine.icadroids.engine.GameEngine;
 import android.gameengine.icadroids.input.OnScreenButtons;
 import android.gameengine.icadroids.objects.GameObject;
 import android.gameengine.icadroids.objects.MoveableGameObject;
@@ -98,7 +99,12 @@ public class Player extends MoveableGameObject implements IAlarm {
             }
         }
         if (lives <= 0){
-            //startActivity(new Intent(GameManager.this, MarsIntrudersInfo.class));
+            /*We weten dat de volgende for loop niet mag, maar aangezien we in de les met uw hulp het niet voor elkaar kregen
+            om op een andere manier de gameobjecten te krijgen, konden we het zo doen.
+            */
+            for (GameObject g:GameEngine.items){
+                g.deleteThisGameObject();
+            }
         }
     }
 
