@@ -23,7 +23,7 @@ public class EnemyBoss extends MoveableGameObject implements IAlarm{
 
     public void shoot() {
         for(int i=0; i< NUMBEROFBULLETS ; i++){
-            Bullet bullet = new Bullet();
+            Bullet bullet = new Bullet(gameManager);
             gameManager.addGameObject(bullet, this.getX() + i * 65, this.getY() + getFrameHeight() + 4);
             bullet.setDirectionSpeed(180, 5);
         }

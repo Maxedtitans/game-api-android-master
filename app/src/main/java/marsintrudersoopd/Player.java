@@ -1,5 +1,7 @@
 package marsintrudersoopd;
 
+import android.GameAPI.ICA_DROID.R;
+import android.content.Intent;
 import android.gameengine.icadroids.alarms.Alarm;
 import android.gameengine.icadroids.alarms.IAlarm;
 import android.gameengine.icadroids.input.OnScreenButtons;
@@ -77,7 +79,7 @@ public class Player extends MoveableGameObject implements IAlarm {
         }
         if (OnScreenButtons.buttonA){
            if (pressedButton == true){
-               Bullet bullet = new Bullet();
+               Bullet bullet = new Bullet(gameManager);
                gameManager.addGameObject(bullet, gameManager.player.getX() + 10, gameManager.player.getY() - 23);
                bullet.setDirectionSpeed(0, 8);
                myAlarm.restartAlarm();
@@ -98,7 +100,7 @@ public class Player extends MoveableGameObject implements IAlarm {
             }
         }
         if (lives <= 0){
-           //System.out.println("GAME OVER!");
+            //startActivity(new Intent(GameManager.this, MarsIntrudersInfo.class));
         }
     }
 
@@ -128,9 +130,9 @@ public class Player extends MoveableGameObject implements IAlarm {
     @Override
     public void drawGameObject(Canvas canvas) {
         super.drawGameObject(canvas);
-        Paint blackLetters=new Paint();
-        blackLetters.setColor(Color.BLACK);
-        blackLetters.setTextSize(20);
-        canvas.drawText("Levens: "+ lives, 7, 15, blackLetters );
+        Paint yellowLetters=new Paint();
+        yellowLetters.setColor(Color.YELLOW);
+        yellowLetters.setTextSize(20);
+        canvas.drawText("Levens: "+ lives, 7, 15, yellowLetters );
     }
 }

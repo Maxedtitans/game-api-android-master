@@ -57,10 +57,9 @@ public class Vijand extends MoveableGameObject implements IAlarm{
      */
 
     public void shoot() {
-       Bullet bullet = new Bullet();
+       Bullet bullet = new Bullet(gameManager);
        gameManager.addGameObject(bullet, this.getX() + getFrameWidth() / 2, this.getY() + getFrameHeight() + 4);
        bullet.setDirectionSpeed(180, 5);
-       myAlarm.restartAlarm();
     }
 
     @Override
@@ -80,6 +79,9 @@ public class Vijand extends MoveableGameObject implements IAlarm{
 
     @Override
     public void triggerAlarm(int alarmID) {
-        shoot();
+        if(getY() >= enemycontainer.getHoogsteY()){
+            shoot();
+        }
+        myAlarm.restartAlarm();
     }
 }

@@ -15,14 +15,6 @@ public class EnemyContainer extends MoveableGameObject{
         int teller = 0;
         this.gameManager = gameManager;
         for (int i = 1; i  <= ROWS; i++) {
-            if (i < ROWS) {
-                for (int j = 0; j < ENEMYROW; j++) {
-                    vijanden.add(new Vijand(gameManager, this, false));
-                    gameManager.addGameObject(vijanden.get(teller), (20 + 50 * j), 30 * i);
-                    teller++;
-                }
-            }
-            else {
                 for (int j = 0; j < ENEMYROW; j++) {
                     if (j % 2 == 0) {
                         vijanden.add(new Vijand(gameManager, this, true));
@@ -35,7 +27,6 @@ public class EnemyContainer extends MoveableGameObject{
                 }
             }
         }
-    }
 
     public void naarLinks(){
         for(Vijand vijand : vijanden){
@@ -75,6 +66,16 @@ public class EnemyContainer extends MoveableGameObject{
         return meestRechts;
     }
 
+    public int getHoogsteY(){
+        int hoogsteY = 0;
+        for (Vijand vijand : vijanden){
+            if (vijand.getY() > hoogsteY){
+                hoogsteY = vijand.getY();
+            }
+        }
+        return hoogsteY;
+    }
+
     public void resetEnemies(){
         for (Vijand vijand: vijanden){
             vijand.setY(vijand.getY() - gameManager.getScreenHeight()/3);
@@ -84,6 +85,9 @@ public class EnemyContainer extends MoveableGameObject{
     @Override
     public void update(){
         if (vijanden.size() > 0) {
+            if (vijanden.get((vijanden.size() - 1)).getY() > 300) {
+                resetEnemies();
+            }
             if (getRechterX() + vijanden.get(0).getFrameWidth() <= gameManager.getScreenWidth() - 10 && isRechterkantScherm == false) {
                 naarRechts();
                 if (getRechterX() + vijanden.get(0).getFrameWidth() == 311) {

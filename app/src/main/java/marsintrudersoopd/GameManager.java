@@ -18,7 +18,7 @@ public class GameManager extends GameEngine {
         // Set up control mechanisms to use
         TouchInput.use = true;
         OnScreenButtons.use = true;
-
+        setBackground("backgroundgrey");
         PowerUpsController controller = new PowerUpsController(this);
         enemycontainer = new EnemyContainer(this);
         player = new Player(this, enemycontainer);
@@ -26,8 +26,6 @@ public class GameManager extends GameEngine {
     }
 
     public void update() {
-        System.out.println(enemycontainer.vijanden.size());
-        System.out.println(killedAliens);
         super.update();
         enemycontainer.update();
         if (enemycontainer.vijanden.size() == 0 && killedAliens == false){
