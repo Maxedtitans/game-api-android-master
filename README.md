@@ -1,4 +1,5 @@
 # Mars Intruders 
-# HAN OOPD \n
-# ©Mart Geluk & Sjuul Föllings
+# HAN OOPD 
 # I1TB-N
+# ©Mart Geluk & Sjuul Föllings
+
