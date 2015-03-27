@@ -1,3 +1,5 @@
 # GameOOPD
-OOPD Game
-OOPD space invaders game for HAN project
+Mars Intruders 
+HAN OOPD
+©Mart Geluk & Sjuul Föllings
+I1TB-N
