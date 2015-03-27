@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="marsintrudersoopd.MarsIntrudersInfo">
+
+    <TextView android:text="Beweeg het ruimteschip met de pijltjes toetsen, gebruik de A knop om te schieten. " android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/InfoText"
+        android:textSize="20dp" />
+
+    <TextView
+        android:text="Gemaakt door Mart &apos;The beast&apos; Geluk &amp; Sjuul &apos;The monster&apos; Föllings, versie 1.0.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

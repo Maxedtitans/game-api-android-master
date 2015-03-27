@@ -8,16 +8,22 @@ import android.view.MenuItem;
 import android.GameAPI.ICA_DROID.R;
 import android.view.View;
 
-public class Main2Activity extends Activity {
+public class MarsIntrudersHome extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.marsintrudershome);
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Main2Activity.this, GameManager.class));
+                startActivity(new Intent(MarsIntrudersHome.this, GameManager.class));
+            }
+        });
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MarsIntrudersHome.this, MarsIntrudersInfo.class));
             }
         });
     }

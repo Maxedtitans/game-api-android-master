@@ -25,17 +25,19 @@
             android:name="marsintrudersoopd.GameManager"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
-
         </activity>
-
         <activity
-            android:name="marsintrudersoopd.Main2Activity"
+            android:name="marsintrudersoopd.MarsIntrudersHome"
             android:label="@string/title_activity_main2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="marsintrudersoopd.MarsIntrudersInfo"
+            android:label="@string/title_activity_mars_intruders_info" >
         </activity>
     </application>
 
